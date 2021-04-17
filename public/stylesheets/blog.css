@@ -1,0 +1,37 @@
+/* rgb(237, 239, 241) */
+.container .blog {
+  width: 976px;
+  min-height: 500px;
+  padding: 20px 0;
+  display: flex;
+}
+.container .blog .left_wrap {
+  width: 640px;
+}
+.container .left_wrap .blog_nav {
+  width: 616px;
+  height: 34.4px;
+  padding: 10px 12px;
+  background-color: #fff;
+  border: 1px solid #bdbfc0;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.container .blog .left_wrap .articles {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  background-color: rgb(237, 239, 241);
+}
+.container .blog .right_wrap {
+  width: 312px;
+  overflow: hidden;
+  margin-left: 24px;
+}
+.container .blog .right_wrap .website_info {
+  height: 200px;
+  background-color: #fff;
+  border-radius: 4px;
+}

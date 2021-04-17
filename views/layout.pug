@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/base.css')
+    link(rel='stylesheet', href='/stylesheets/blog.css')
+    script(src="/javascripts/mzili.js") 
+  body
+    div(class='header')
+      h2 木子李
+      nav( class='header_nav' id='header_nav')
+        span(class='initial_a')
+          a(href="/") 我的圈子 
+        ul(class='hide' id='menu_li') 
+          li 
+            a(href="/bar") 音乐圈 
+          li 
+            a(href="/bar") 工具篇 
+          li 
+            a(href="/bar") 回忆录
+          li 
+            a(href="/bar") 技术圈     
+        div(class='menu_btn' id='menu_btn') MENU 
+      div(class='search')
+        input(type="search" name="q" placeholder="Search")
+      nav(class='header_nav_right')
+        a(href="") 首页 
+        a(href="") 归档 
+        a(href="") 关于 
+        a(href="") 留言 
+      div(class='header_user_dropdown')
+        ul
+          //- 已登录
+          - var authenticated = true
+          li(class=authenticated ? 'hide' : 'show')
+            a(href="")  login
+          li(class=authenticated ? 'show' : 'hide')
+            a(href="") admin
+          li(class=authenticated ? 'show' : 'hide')
+            a(href="") sing up 
+    div(class='banner')
+      span(class='bg_img')
+      div(class="banner_wrap")
+        div(class='logo')
+        div(class='website_name')
+    div(class='container') 
+      block content
+    footer(class='footer')
+      p Powered by Copyright © 一 叶 知 秋 2020 - 2021 版权所有
