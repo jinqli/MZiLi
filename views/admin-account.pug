@@ -1,0 +1,9 @@
+extends admin_layout
+
+block content
+  div(class='account') 
+    ul
+      each item in  accounts
+        h2= item.username
+        p=item.key 
+    

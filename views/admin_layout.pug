@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    title= title
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href='/stylesheets/admin.css' rel='stylesheet'>
+  body
+  div(class='sidebar')
+    div(class='logo_content')
+      div(class='logo')
+        i(class='bx bxl-c-plus-plus')
+        div(class='logo_name') MuZiLi
+      i(class='bx bx-menu' id='btn')
+    ul(class='nav_list')
+      li 
+        a(href="/admin") 
+          i(class='bx bx-grid-alt')
+          span(class='links_name') Dashboard
+        span(class='tooltip') Dashboard
+      li 
+        a(href="/admin/articles") 
+          i(class='bx bx-grid-alt')
+          span(class='links_name') articles 
+        span(class='tooltip') articles
+      li 
+        a(href="/admin/categories") 
+          i(class='bx bx-grid-alt')
+          span(class='links_name') categories
+        span(class='tooltip') categories
+      li 
+        a(href="/admin/account") 
+          i(class='bx bx-grid-alt')
+          span(class='links_name') account
+        span(class='tooltip') account
+      li 
+        a(href="/admin/setting") 
+          i(class='bx bx-grid-alt')
+          span(class='links_name') setting
+        span(class='tooltip') setting
+    div(class='profile_content')
+      div(class='profile')
+        div(class='profile_details')
+          //- img(src="", alt="", srcset="")
+          div(class='name_job')
+            div(class='name') 木子李
+            div(class='job') 十年之约
+          i(class='bx bx-log-out' id='log_out')
+  div(class='admin_container') 
+    header(class='admin_container_header')
+    block content
+    footer(class='footer')
+      p Powered by Copyright © 一 叶 知 秋 2020 - 2021 版权所有
+    script(src="/javascripts/admin.js") 

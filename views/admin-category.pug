@@ -1,0 +1,9 @@
+extends admin_layout
+
+block content 
+  div(class='category')
+    ul 
+      each item in categories 
+        h2=item.name 
+        img(src=item.imgUrl, alt="", srcset="")
+        p=item.description 

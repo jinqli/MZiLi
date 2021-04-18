@@ -10,7 +10,7 @@ html
       h2 木子李
       nav( class='header_nav' id='header_nav')
         span(class='initial_a')
-          a(href="/") 我的圈子 
+          span 我的圈子 
         ul(class='hide' id='menu_li') 
           li 
             a(href="/bar") 音乐圈 
@@ -35,7 +35,7 @@ html
           li(class=authenticated ? 'hide' : 'show')
             a(href="")  login
           li(class=authenticated ? 'show' : 'hide')
-            a(href="") admin
+            a(href="/admin") admin
           li(class=authenticated ? 'show' : 'hide')
             a(href="") sing up 
     div(class='banner')
