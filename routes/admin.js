@@ -1,39 +1,36 @@
 const router = require("koa-router")();
+const { articleList } = require("../controller/article");
+// await ctx.response.redirect("/user/login"); // url重定向
 
 router.prefix("/admin");
 
 router.get("/", async (ctx, next) => {
-  // if (key == "1") {
   await ctx.render("dashboard", {
-    title: "admin",
+    data: "result",
   });
-  // } else {
-  // await ctx.response.redirect("/user/login");
-  // }
 });
 
 // article
 router.get("/articles", async (ctx, next) => {
-  // if (key == "1") {
+  const result = await articleList();
   await ctx.render("admin-articles", {
-    articles: [
-      {
-        title: "001",
-        content: "content...",
-      },
-      {
-        title: "001",
-        content: "content...",
-      },
-      {
-        title: "001",
-        content: "content...",
-      },
-    ],
+    articles: result,
   });
-  // } else {
-  // await ctx.response.redirect("/user/login");
-  // }
+});
+
+// article/form-add
+router.get("/article/form-add", async (ctx, next) => {
+  const result = {};
+  await ctx.render("article-form", {
+    article: result,
+  });
+});
+// article/form-edit
+router.get("/article/form-edit", async (ctx, next) => {
+  const result = {};
+  await ctx.render("article-form", {
+    article: result,
+  });
 });
 
 // admin/category

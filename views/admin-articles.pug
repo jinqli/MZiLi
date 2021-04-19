@@ -1,9 +1,23 @@
 extends admin_layout
 
 block content
-  div(class='articles') 
-    ul
-      each val in  articles
-        h2= val.title
-        p=val.content 
+  div(class='article__list') 
+    button 
+      a(href="/admin/article/form-add")  添加文章
+    div(class="article__list-wrap")
+      div(class='article__item-header')
+        span 标题
+        span 分类
+        span 时间
+        span 操作      
+      div(class='article__item')
+        each val in  articles
+          span
+            a(href=`/article?id=${val._id}`) #{val.title}
+          span=val.category 
+          span=val.createdAt 
+          span 
+            a(href="/admin/article/form-edit") edit 
+            span del 
+    
     

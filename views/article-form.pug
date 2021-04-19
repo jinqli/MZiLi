@@ -1,0 +1,34 @@
+extends admin_layout
+
+block content
+  div(class='article__form')
+    div(class='title item')
+      span 标题：
+      input(type="text" name="title" placeholder="标题" onchange="console.log(this.value)")
+    div(class='category item')
+      span 分类：
+      select(name="title")
+        optio(value="文章分类") 文章分类
+    div(class="author item")
+      span 作者：
+      input(type="text" name="author" value="ljq" placeholder="作者" disabled)
+    div(class="article-img item")
+      span 图片：
+      input(type="text" name="imgUrl" placeholder="img-url")
+      span(style="fonts-ize: 14;color: red; margin-left: 10px") 目前只支持上传图片url
+    div(class="date item")
+      span 时间：
+      input(
+        value="2021/2/2"
+        type="date"
+      )
+    div(class="content")
+      h5 内容：
+      div(class="wrap")
+        textarea(
+          name="content"
+          cols="80"
+          rows="40"
+        )
+        div(class="show-html")
+      div(class="button" id='addOrEditArticle') add

@@ -9,6 +9,9 @@ const logger = require("koa-logger");
 const index = require("./routes/index");
 const users = require("./routes/users");
 const admin = require("./routes/admin");
+const articles = require("./routes/articles");
+const categories = require("./routes/categories");
+const leave_message = require("./routes/leave_message");
 
 // error handler
 onerror(app);
@@ -41,6 +44,9 @@ app.use(async (ctx, next) => {
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
 app.use(admin.routes(), admin.allowedMethods());
+app.use(articles.routes(), articles.allowedMethods());
+app.use(categories.routes(), categories.allowedMethods());
+app.use(leave_message.routes(), leave_message.allowedMethods());
 
 // error-handling
 app.on("error", (err, ctx) => {
