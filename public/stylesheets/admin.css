@@ -4,6 +4,15 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+a {
+  text-decoration: none;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 body {
   position: relative;
   min-height: 100vh;
@@ -198,7 +207,68 @@ body {
 /* ------------------------admin_container_header--------- */
 .admin_container_header {
   height: 50px;
-  background-color: #1d1b31;
+  background-color: #1d1b3190;
+}
+.admin_container_header p {
+  color: #fff;
+  float: left;
+  line-height: 50px;
+  margin-left: 48px;
+}
+.admin_container_header .profile_wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.admin_container_header .profile_wrap .avatar {
+  display: flex;
+  padding: 0 20px;
+  min-width: 177.16px;
+  height: 46px;
+  margin: 2px 0;
+  background-color: #11101d40;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.admin_container_header .profile_wrap .avatar img {
+  height: 44px;
+  width: 44px;
+  border-radius: 22px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+.admin_container_header .profile_wrap .avatar .username {
+  padding: 0 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff;
+  cursor: pointer;
+}
+.admin_container_header .profile_wrap .avatar i {
+  cursor: pointer;
+}
+.admin_container_header .href {
+  min-width: 177.16px;
+  background-color: #11101d40;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 12px;
+}
+.admin_container_header .href a {
+  display: block;
+  font-size: 18px;
+  padding: 10px 0;
+  color: #fff;
+}
+.admin_container_header .href a:hover {
+  background-color: #fff;
+  border-radius: 12px;
+  color: #000;
 }
 /* ---------------------footer---------------------- */
 .admin_container .footer {
@@ -240,3 +310,5 @@ body {
   width: 100%;
   min-height: 800px;
 }
+
+/*  */

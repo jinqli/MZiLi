@@ -70,12 +70,20 @@ onload = function () {
   let btn = document.querySelector("#btn");
   let sidebar = document.querySelector(".sidebar");
   let log_out = document.querySelector("#log_out");
+  // ------------------
+  let profile = document.querySelector("#profile");
+  let href = document.querySelector(".href");
 
   btn.onclick = function () {
     sidebar.classList.toggle("active");
   };
   log_out.onclick = function () {
     sidebar.classList.toggle("active");
+  };
+  profile.onclick = function () {
+    href.className === "href hide"
+      ? (href.className = "href show")
+      : (href.className = "href hide");
   };
   //==================================ECharts
   // 基于准备好的dom，初始化echarts实例
