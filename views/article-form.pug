@@ -4,28 +4,30 @@ block content
   div(class='article__form')
     div(class='title item')
       span 标题：
-      input(type="text" name="title" placeholder="标题" onchange="console.log(this.value)")
+      input(type="text" id="article_input_title" name="title" placeholder="标题" onchange="onChangeTitle")
     div(class='category item')
       span 分类：
-      select(name="title")
-        optio(value="文章分类") 文章分类
+      input(type="text" id="article_select_category" name="category" placeholder="分类" onchange="onChangeCategory")
+      //- select(name="title" )
+      //-   optio(value="文章分类") 文章分类
     div(class="author item")
       span 作者：
-      input(type="text" name="author" value="ljq" placeholder="作者" disabled)
+      input(type="text" id="article_input_author" onchange="onChangeAuthor" name="author" value="ljq" placeholder="作者")
     div(class="article-img item")
       span 图片：
-      input(type="text" name="imgUrl" placeholder="img-url")
+      input(type="text" id="article_input_imgUrl" onchange="onChangeImgUrl" name="imgUrl" placeholder="img-url")
       span(style="fonts-ize: 14;color: red; margin-left: 10px") 目前只支持上传图片url
     div(class="date item")
       span 时间：
       input(
-        value="2021/2/2"
+        id="article_input_createdAt" onchange="onChangeCreatedAt"
         type="date"
       )
     div(class="content")
       h5 内容：
       div(class="wrap")
         textarea(
+          id="article_text_content" onchange="onChangeContent"
           name="content"
           cols="80"
           rows="40"

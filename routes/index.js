@@ -1,5 +1,5 @@
 const router = require("koa-router")();
-const { getArtById } = require("../controller/article");
+const { getArtById, articleList } = require("../controller/article");
 
 router.get("/", async (ctx, next) => {
   const obj = { title: "koa" };
@@ -7,12 +7,19 @@ router.get("/", async (ctx, next) => {
     title: obj.title,
   });
 });
+// article-list
+router.get("/article-list", async (ctx, next) => {
+  const result = await articleList();
+  await ctx.render("article-list", {
+    data: result,
+  });
+});
 
-router.get("/article", async (ctx, next) => {
+router.get("/article-detail", async (ctx, next) => {
   const { id } = ctx.request.query;
   const result = await getArtById(id);
-  await ctx.render("article", {
-    title: result,
+  await ctx.render("article-detail", {
+    article: result,
   });
 });
 

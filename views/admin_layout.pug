@@ -5,6 +5,8 @@ html
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href='/stylesheets/admin.css' rel='stylesheet'>
     <link href='/stylesheets/admin-article.css' rel='stylesheet'>
+    //- echarts
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.0/dist/echarts.min.js"></script>
   body
   div(class='sidebar')
     div(class='logo_content')
@@ -20,22 +22,22 @@ html
         span(class='tooltip') Dashboard
       li 
         a(href="/admin/articles") 
-          i(class='bx bx-grid-alt')
+          i(class='bx bxs-book-alt')
           span(class='links_name') articles 
         span(class='tooltip') articles
       li 
         a(href="/admin/categories") 
-          i(class='bx bx-grid-alt')
+          i(class='bx bxs-category-alt')
           span(class='links_name') categories
         span(class='tooltip') categories
       li 
         a(href="/admin/account") 
-          i(class='bx bx-grid-alt')
+          i(class='bx bxs-user-account')
           span(class='links_name') account
         span(class='tooltip') account
       li 
         a(href="/admin/setting") 
-          i(class='bx bx-grid-alt')
+          i(class='bx bx-badge')
           span(class='links_name') setting
         span(class='tooltip') setting
     div(class='profile_content')
@@ -50,5 +52,5 @@ html
     header(class='admin_container_header')
     block content
     footer(class='footer')
-      p Powered by Copyright © 一 叶 知 秋 2020 - 2021 版权所有
-    script(src="/javascripts/admin.js") 
+      p Powered by Copyright © 一 叶 知 秋 2020 - 2021 版权所有 
+  script(src="/javascripts/admin.js") 

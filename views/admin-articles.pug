@@ -13,11 +13,11 @@ block content
       div(class='article__item')
         each val in  articles
           span
-            a(href=`/article?id=${val._id}`) #{val.title}
+            a(href=`/article-detail?id=${val._id}`) #{val.title}
           span=val.category 
           span=val.createdAt 
           span 
-            a(href="/admin/article/form-edit") edit 
+            a(href=`/admin/article/form-edit?id=${val._id}`) edit 
             span del 
     
     

@@ -17,26 +17,17 @@ router.post("/addArticle", async (ctx, next) => {
   const article = ctx.request.body;
   try {
     await addArticle(article);
-    ctx.body = {
-      errno: 0,
-      message: "添加成功",
-    };
+    ctx.body = 0;
   } catch (error) {
-    ctx.body = {
-      errno: -1,
-      message: "添加失败:" + error,
-    };
+    ctx.body = -1;
   }
 });
 
 router.post("/updateArticle", async (ctx, next) => {
   const { _id } = ctx.request.body;
   const article = ctx.request.body;
-  const result = await updateArticle(_id, article);
-  ctx.body = {
-    errno: 0,
-    data: result,
-  };
+  await updateArticle(_id, article);
+  ctx.body = 0;
 });
 
 router.get("/delArticle", async (ctx, next) => {
@@ -62,8 +53,8 @@ router.get("/articleList", async (ctx, next) => {
 });
 
 router.get("/getArticleById", async (ctx, next) => {
-  const { _id } = ctx.request.query;
-  const result = await getArticleById(_id);
+  const { id } = ctx.request.query;
+  const result = await getArticleById(id);
   ctx.body = {
     errno: 0,
     data: result,

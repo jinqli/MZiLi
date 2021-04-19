@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(class='blog')
+    div(class='left_wrap')  
+      div(class='blog_nav') nav 
+      div(class='articles')
+        each item in  data
+          span
+            a(href=`/article?id=${val._id}`) #{val.title}
+          span=item.category 
+          span=item.createdAt 
+    div(class='right_wrap')  
+      div(class='website_info')

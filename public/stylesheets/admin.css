@@ -221,8 +221,9 @@ body {
 }
 /* -----------dashboard--------------- */
 .admin_container .dashboard {
-  width: 100%;
-  min-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* -----------article__list--------------- */
 .admin_container .article__list {

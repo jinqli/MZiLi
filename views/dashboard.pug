@@ -1,5 +1,9 @@
 extends admin_layout
 
 block content
-  div(class='dashboard') Dashboard
-    p data #{JSON.stringify(data)} 
+  div(class='dashboard') 
+    //- <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    div(id="main" calss="article" style="width: 600px;height:400px;")
+    div(id="main_2" calss="article" style="width: 600px;height:400px;")
+    div(id="website_time_link" class="website_time_link")
+  
